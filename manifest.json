@@ -1,0 +1,35 @@
+{
+  "name": "Web scrapping tool",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Just a test",
+  "homepage_url": "https://filmweb.pl",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "html/popup.html"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+     "matches": [
+       "https://filmweb.pl/*",
+       "https://filmweb.pl/*"
+     ],
+     "js": [
+        "js/jquery.js",
+        "js/inject.js"
+     ]
+    }
+  ],
+  "permissions": [
+     "http://filmweb.pl/*",
+     "https://filmweb.pl/*",
+     "activeTab"
+  ]
+}
